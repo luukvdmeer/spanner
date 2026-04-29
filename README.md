@@ -1,7 +1,5 @@
 # Modernizing spatial network analysis in R
 
-[![build-status](https://github.com/luukvdmeer/spanner/actions/workflows/publish-proposal.yaml/badge.svg)](https://github.com/luukvdmeer/spanner/actions/workflows/publish-proposal.yaml)
-
 The proposed project *Modernizing spatial network analysis in R* (acronym: *spanner*) comprises the development of version 1.0 of the `sfnetworks` R package. The new version should offer a stable tool for the analysis of geospatial networks across various domains, that is able to handle geospatial network data of large volume and variety, and can easily be extended for more application-specific purposes. By doing so, it will help to keep R relevant as a programming language for the analysis of geospatial networks, conforming to the current computational requirements of the field. It will benefit the existing, multi-disciplinary user community around `sfnetworks` as well as the broader r-spatial community with interest in network data. Although the focus of the new version is on performance improvement for larger networks, the development will stay close to the initial design principles of `sfnetworks`, in which the speed of computations is not superior to a clear and intuitive interface, with code that is easy to understand and therefore easy to adapt and extend. The main deliverable is the CRAN release of the new `sfnetworks` package.
 
 Click [here](https://luukvdmeer.github.io/spanner/isc-proposal.html) to read the proposal text.
