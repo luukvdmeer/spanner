@@ -9,14 +9,20 @@ thorough understanding going in of what the risks are to delivery
 What does success look like?
 -->
 
+The project is considered done when all five deliverables outlined in the project plan have been delivered. That is, release of a beta-version of `sfnetworks v1.0` on GitHub, release of a stable version of `sfnetworks v1.0` on CRAN, publication of a blogpost describing the CRAN release on r-spatial, publication of an academic article in the Journal of Statistical Software, and co-hosting of a special session on geosptial network analysis at the Spatial Data Science Across Languages workshop.
+
 ## Measuring success
 <!--
 How will we know when success is achieved, what markers can we use
 along the way
 -->
 
+Progress will be tracked on the GitHub repository of `sfnetworks`. We will continuously commit the work to Git and push it to the repository, using structured commit messages as described in the [contributing guidelines](https://luukvdmeer.github.io/sfnetworks/CONTRIBUTING.html#structured-commit-messages). For each individual task, we will open an issue in the issue tracker, and close it once completed. Through these issues, we can also seek support from the community. The beta-release and CRAN release will be marked with a [GitHub release tag](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository), just like all other previous releases of `sfnetworks`. Each release will come with a detailed changelog, describing the implemented changes. The blogpost and journal publication will be openly available to everyone, and shared on social media. The special session at the Spatial Data Science Across Languages workshop will be marketed through the Spatial Data Science Across Languages community. Afterwards, we will write a summary of the session, and share it on social media. The session may also lead to a journal publication, but this falls outside the scope of the project.
+
 ## Future work
 <!--
 How could this be extended / developed in the future by yourself
 and/or the community in general?
 -->
+
+The `sfnetworks` package is designed as a general-purpose tool that is meant to be adapted and extended for application-specific use. As listed in [Section 2](#the-problem), this has already been done by various developers, and we hope this will continue in the future. Lucas van der Meer himself will use the package in his doctoral research on cycling accessibility and sustainable urban transport planning.

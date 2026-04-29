@@ -17,11 +17,16 @@ go? Briefly describe all participants and the skills they will bring
 to the project.
 -->
 
+**Lucas van der Meer** will be the responsible software developer in the project. He is a doctoral researcher at the Department of Geoinformatics of the University of Salzburg, with a focus on spatial network analysis for sustainable transport planning. Lucas is author and maintainer of the `sfnetworks` R package. His supervisor, **Martin Loidl**, will manage the administration and budget.
+
 ## Contributors
 <!--
 Who are the people who have actively helped with this proposal but
 won't necessarily be on the core project team later?
 -->
+
+- Robin Lovelace, Professor in Transport Data Science at the University of Leeds and co-author of the `sfnetworks` package.
+- Andrea Gilardi, Assistant-Professor in Statistics at the University of Milano-Bicocca and co-author of the `sfnetworks` package.
 
 ## Consulted
 <!--
@@ -30,3 +35,8 @@ proposal? This should include any R Consortium & ISC members who the
 proposal has been discussed with.
 -->
 
+- Edzer Pebesma (?)
+- Mark Padgham (?)
+- Inger Fabris-Rotelli (?)
+- Renate Thiede (?)
+- Rafael Pereira (?)

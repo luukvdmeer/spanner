@@ -17,6 +17,8 @@ section.
 Include concrete actions you will take and estimated timeline.
 -->
 
+The proposed project *Modernizing spatial network analysis in R* (acronym: *spanner*) comprises the development of version 1.0 of the `sfnetworks` R package. The new version should offer a stable tool for the analysis of geospatial networks across various domains, that is able to handle geospatial network data of large volume and variety, and can easily be extended for more application-specific purposes. By doing so, it will help to keep R relevant as a programming language for the analysis of geospatial networks, conforming to the current computational requirements of the field. It will benefit the existing, multi-disciplinary user community around `sfnetworks` as well as the broader r-spatial community with interest in network data. Although the focus of the new version is on performance improvement for larger networks, the development will stay close to the initial design principles of `sfnetworks`, in which the speed of computations is not superior to a clear and intuitive interface, with code that is easy to understand and therefore easy to adapt and extend. The main deliverable is the CRAN release of the new `sfnetworks` package.
+
 ## Detail
 <!--
 Go into more detail about the specifics of the project and how it delivers
@@ -25,15 +27,27 @@ against the problem.
 Depending on project type the detail section should include:
 -->
 
+We organized the content of the proposal in four distinct work packages (WPs), which are described in more detail below.
+
+1. **WP 1: Update the current codebase.** Within this work package, the existing code of `sfnetworks` will be updated and improved. This has three aims. Firstly, code of computationally intensive functions will be refactored to better handle large network data. This includes the functions `to_spatial_smooth()` for simplifying larger networks through the removal of pseudo nodes and `to_spatial_subdivision()` for constructing subdivisions of larger networks. Secondly, the code will be aligned with the new major release of `igraph` and its R interface. This release introduced breaking changes from previous versions, and added new functionalities relevant to geospatial networks, such as k shortest path finding, voronoi partitioning, and weighted eccentricity computation. Finally, bug reports and feature request opened by the user community on the GitHub issue tracker will be adressed.
+
+2. **WP 2: Enable high-performance routing.** Many tasks in geospatial network analysis involve the computation of optimal paths between nodes in a network. This is computationally intensive and therefore especially challenging when networks get larger. While `igraph` is a well-developed library with many functionalities, there are other R packages that have implemented faster approaches for path finding by wrapping C++ code, most notably `dodgr` [@padgham2019] and `cppRouting` [@larmet2022]. To better accommodate for larger network data, the new version of `sfnetworks` will implement seamless integration with these packages, allowing the user to choose between three different routing backends (i.e., `igraph`, `dodgr`, and `cppRouting`) within the same interface of the `st_network_paths()` function, taking away the need to convert back and forth between different data formats and different settings.
+
+3. **WP 3: Enable analysis of out-of-memory network data.** Currently `sfnetworks` requires network data to be fully loaded into R's memory. This becomes problematic with larger networks. Recently, the R package `duckspatial` has been released, providing a bridge between R and the spatial extension of DuckDB that allows to perform spatial operations on data outside R's memory [@cidre2026]. To better accommodate for larger network data, the new version of `sfnetworks` will implement seamless integration with the `duckspatial` package, such that at least spatial operations, and specifically spatial filters, can be performed before loading the network data into R's memory. Possibilities to also perform network analytical operations such as path finding or centrality computations in this way will be explored, but their implementation is outside the scope of the proposal.
+
+4. **WP 4: Document and disseminate.** The last work package comprises the documentation and dissemination of the new `sfnetworks` release. The current [documentation website](https://luukvdmeer.github.io/sfnetworks/) will be updated with new vignettes and additional examples. We will also prepare a manuscript for submission to the [Journal of Statistical Software](https://www.jstatsoft.org/index), for better visibility and credibility of `sfnetworks` in the academic domain. Once the new version is released, we will write a blogpost on the [r-spatial blog](https://r-spatial.org/), as a follow-up to the [initial blogpost](https://r-spatial.org/r/2019/09/26/spatial-networks.html) when the development of `sfnetworks` started in 2019. Finally, we aim to co-host a special session on geospatial network analysis at the [Spatial Data Science Across Languages](https://spatial-data-science.github.io/) workshop in 2027, bringing together developers and users from both the R, Python and Julia communities. During this session, we will present the new version of `sfnetworks`, collect feedback, discuss common challenges and potential solutions, and learn from each other.
+
 ### Minimum Viable Product
 
 <!--
 What is the smallest thing you can build that delivers value to your users?
 -->
 
-### Architecture
+The minimum viable product is a new release of `sfnetworks` on CRAN that implements the tasks of at least WP1, including corresponding documentation.
 
 <!--
+### Architecture
+
 What does the high-level architecture look like?
 -->
 
@@ -43,8 +57,12 @@ What does the high-level architecture look like?
 What assumptions are you making that, if proven false, would invalidate the project?
 -->
 
+The tasks of WP1 and WP2 require few critical assumptions. The current version of `sfnetworks` already builds on `igraph`, and aligning it to the new `igraph` release is not expected to cause any issues. Integration with `dodgr` has already been explored and is straightforward. The integration with `cppRouting` is still to be explored, and assumed to be feasible. The integration with `duckDB` in WP3 is much more experimental. We are confident that, given the current functionalities of `duckspatial`, spatial filtering of network data before loading anything into R's memory is feasible to achieve within the project runtime. However, further integration of `sfnetworks` functions with `duckDB` remains to be explored and is at this stage only assumed to be a possibility. If this assumption turns out to be false, it would not invalidate the project, as the implementation of these additional functionalities falls outside of the core project scope, and the aims here are merely explorative. Regarding WP4, we assume that `sfnetworks` fits the scope of the Journal of Statistical Software, and that the manuscript will be accepted. We are confident that it will, given our experience with writing academic articles and considering that `sfnetworks` has already been used by spatial statisticians. If not, the Journal of Open Source Software and the R Journal will be considered as alternatives for dissemination. We also assume that the idea to host a multi-language session on geospatial network analysis at the Spatial Data Science Across Languages workshop will be positively received. As we know the organizers of the workshop and have good relations with other geospatial network developers in the different language communities, we consider this a reasonable assumption. Other conferences such as UseR! or FOSS4G could be considered as alternatives.
+
 ### External dependencies
 
 <!--
 What external dependencies does the project have (e.g. libraries, services, other projects, etc.)?
 -->
+
+The `sfnetworks` package has several dependencies, including `sf`, `tidygraph`, and `igraph`. For the new version, the packages `dodgr`, `cppRouting`, and `duckspatial` will be important dependencies as well. All these packages are released on CRAN, relatively stable, and can be used in their current form. The project therefore does not have critical dependencies on the developers of these packages, e.g. to fix bugs or implement additional features. There are also no dependencies on external services or other projects.

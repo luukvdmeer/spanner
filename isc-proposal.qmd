@@ -1,10 +1,10 @@
 ---
-title: "Proposal Title"
+title: "Modernizing spatial network analysis in R"
 author:
-  - name: Annie Easley
-    orcid: 5555-5555-5555-5555
+  - name: Lucas van der Meer
+    orcid: 0000-0001-6336-8628
     affiliations:
-      - "Lewis Research Center, National Aeronautics and Space Administration"
+      - "Department of Geoinformatics, University of Salzburg"
 
 date: today
 date-format: iso
