@@ -9,7 +9,7 @@ thorough understanding going in of what the risks are to delivery
 What does success look like?
 -->
 
-The project is considered done when all five deliverables outlined in the project plan have been delivered. That is, release of a beta-version of `sfnetworks v1.0` on GitHub, release of a stable version of `sfnetworks v1.0` on CRAN, publication of a blogpost describing the CRAN release on r-spatial, publication of an academic article in the Journal of Statistical Software, and co-hosting of a special session on geosptial network analysis at the Spatial Data Science Across Languages workshop.
+The project is considered done when all five deliverables outlined in the project plan have been delivered. That is, release of a beta-version of `sfnetworks v1.0` on GitHub, release of a stable version of `sfnetworks v1.0` on CRAN, publication of a blogpost describing the CRAN release on r-spatial, publication of an academic article in the Journal of Statistical Software (or similar), and co-hosting of a special session on geospatial network analysis at the Spatial Data Science Across Languages workshop (or similar).
 
 ## Measuring success
 <!--

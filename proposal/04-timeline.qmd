@@ -49,13 +49,13 @@ to be shared quarterly on the R Consortium blog.
  - [ ] ISC meetings
 -->
 
-Besides the technical delivery, the project aims to disseminate the work to a wide audience. This is achieved through the following deliverables:
+Besides the technical delivery, the project aims to disseminate the work to a wide audience and stimulate community engagement. This is achieved through the following deliverables:
 
 1. A blogpost on the r-spatial blog presenting the new CRAN release: **July 2027**
 2. An academic article published in the Journal of Statistical Software: **September 2027**
 3. A cross-language session on geospatial network analysis at the Spatial Data Science Across Languages workshop: **September 2027**
 
-If requested, we are happpy to also post the blog on the R Consortium blog, and host an online webinar about the new release.
+If requested, we are happy to also post the blog on the R Consortium blog, and host an online webinar about the new release.
 
 We will continue to use the current GitHub repository of `sfnetworks`: [https://github.com/luukvdmeer/sfnetworks](https://github.com/luukvdmeer/sfnetworks). Here, an active user community is already present. The repository contains an [issue tracker](https://github.com/luukvdmeer/sfnetworks/issues) for bug reports and feature requests, a [discussion forum](https://github.com/luukvdmeer/sfnetworks/discussions), a [code of conduct](https://github.com/luukvdmeer/sfnetworks/blob/main/CODE_OF_CONDUCT.md) and detailed [contributing guidelines](https://github.com/luukvdmeer/sfnetworks/blob/main/CONTRIBUTING.md). The license of the package will remain unchanged: Apache 2.0. Regarding social media, we will post updates about the development on the personal [Mastodon account](https://datasci.social/@lvdmeer) of Lucas van der Meer, who has developed a good network in the field of open-source geospatial network analysis.
 
@@ -80,7 +80,7 @@ how funds are used for each project separately. If in doubt, please reach
 out to us.
 -->
 
-Lucas van der Meer is currently employed as a research assistant with a 20 h/week contract at the University of Salzburg. He works in research projects that apply geospatial network analysis, but are not specifically focused on software development and maintenance. The idea of this proposal is to be able to increase his working hours by 20%, i.e. 4 h/week on average, that he can dedicate exclusively to the development of `sfnetworks`. Over the total project runtime of 10 months, this translates to a total of 160 hours. Considering his hourly income of 53,20 EUR, it sums to a total funding amount of 8.512 EUR, equivalent (after rounding) to **10.000 USD**. The funding will be split equally across each WP, meaning that every WP will be allocated 2.500 USD. Hence, the cost breakdown is as follows:
+Lucas van der Meer is currently employed as a research assistant with a 20 h/week contract at the University of Salzburg. He works in research projects that apply geospatial network analysis, but are not specifically focused on software development and maintenance. The idea of this proposal is to be able to increase his working hours by 20%, i.e. 4 h/week on average, that he can dedicate exclusively to the development of `sfnetworks`. Over the total project runtime of 10 months, this translates to a total of 160 hours. His hourly income at the university is 53,20 EUR, equivalent 62,50 USD, using the exchange rate on May 1st 2026 of 1 EUR = 1.1743 USD. This sums to a total funding amount of **10.000 USD**. The funding will be split equally across each WP, meaning that every WP will be allocated 2.500 USD. Hence, the cost breakdown is as follows:
 
 - **WP 1:** 2.500 USD (40h)
 - **WP 2:** 2.500 USD (40h)
